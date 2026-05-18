@@ -1,0 +1,2639 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Trading Mentors | Premium Gold Trading System</title>
+    <meta name="description" content="Institutional-grade gold trading system with precision signals, automated risk management, and millisecond execution. Join elite traders worldwide.">
+    <meta name="keywords" content="gold trading, XAU/USD, forex signals, trading software, gold reversal system, trading mentorship">
+    <meta name="author" content="The Trading Mentors">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#09090b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="The Trading Mentors | Premium Gold Trading System">
+    <meta property="og:description" content="Join 2,400+ elite traders using our AI-powered gold reversal system. 94.7% win rate.">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="owner.webp">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Responsive Design System CSS -->
+    <link rel="stylesheet" href="css/responsive-system.css">
+    
+    <!-- Tailwind CSS (Progressive Enhancement) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Responsive Interactions -->
+    <script src="js/responsive-init.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#FFFBEB',
+                            100: '#FEF3C7',
+                            200: '#FDE68A',
+                            300: '#FCD34D',
+                            400: '#FBBF24',
+                            500: '#F59E0B',
+                            600: '#D97706',
+                            700: '#B45309',
+                            800: '#92400E',
+                            900: '#78350F',
+                        },
+                        emerald: {
+                            500: '#10B981',
+                            600: '#059669',
+                        },
+                        dark: {
+                            950: '#030712',
+                            900: '#09090b',
+                            800: '#18181b',
+                            700: '#27272a',
+                        }
+                    },
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'body': ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 20px rgba(245, 158, 11, 0.3)' },
+                            '100%': { boxShadow: '0 0 40px rgba(245, 158, 11, 0.6)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        * { box-sizing: border-box; }
+        
+        html {
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #09090b;
+            color: #fafafa;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            line-height: 1.2;
+        }
+        
+        /* Enhanced Glass Effect */
+        .glass {
+            background: rgba(24, 24, 27, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Premium Gold Gradient */
+        .gold-gradient {
+            background: linear-gradient(135deg, #F59E0B 0%, #FCD34D 50%, #D97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Enhanced Gold Glow */
+        .gold-glow {
+            box-shadow: 0 0 80px rgba(245, 158, 11, 0.25);
+        }
+        
+        /* Animated Mesh Gradient Backgrounds */
+        .mesh-gradient {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: 0;
+            animation: meshFloat 20s ease-in-out infinite;
+        }
+        
+        @keyframes meshFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(20px, -20px) scale(1.1); }
+        }
+        
+        /* Enhanced Hover Effects */
+        .hover-lift {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(245, 158, 11, 0.25);
+        }
+        
+        /* Stagger Animations */
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        .stagger-5 { animation-delay: 0.5s; }
+        
+        /* Fade In Up Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        /* Video Container Enhancement */
+        .video-container {
+            background: linear-gradient(145deg, #18181b 0%, #09090b 100%);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            box-shadow: 
+                0 0 0 1px rgba(245, 158, 11, 0.1),
+                0 20px 50px -10px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+        
+        /* WhatsApp Pulse Animation */
+        .whatsapp-pulse {
+            animation: whatsapp-pulse 2s infinite;
+        }
+        
+        @keyframes whatsapp-pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+        }
+        
+        /* Enhanced Range Slider */
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            height: 8px;
+            background: linear-gradient(to right, #F59E0B, #D97706);
+            border-radius: 4px;
+            outline: none;
+            width: 100%;
+        }
+        
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            background: #F59E0B;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
+            border: 3px solid #09090b;
+            transition: transform 0.2s ease;
+        }
+        
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+        }
+        
+        input[type="range"]::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            background: #F59E0B;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
+            border: 3px solid #09090b;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #09090b;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #F59E0B, #D97706);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to bottom, #FBBF24, #F59E0B);
+        }
+        
+        /* Marquee Animation */
+        .marquee {
+            animation: marquee 25s linear infinite;
+        }
+        
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        /* Star Glow Effect */
+        .star-glow {
+            text-shadow: 0 0 10px rgba(245, 158, 11, 0.8), 0 0 20px rgba(245, 158, 11, 0.4);
+        }
+        
+        /* Signal Glow Animation */
+        .signal-glow {
+            animation: signalPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes signalPulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(16, 185, 129, 0.6); }
+        }
+        
+        /* Gold Shimmer Border */
+        .gold-shimmer {
+            animation: goldShimmer 3s ease-in-out infinite;
+        }
+        
+        @keyframes goldShimmer {
+            0% { border-color: rgba(245, 158, 11, 0.3); }
+            50% { border-color: rgba(245, 158, 11, 0.6); }
+            100% { border-color: rgba(245, 158, 11, 0.3); }
+        }
+        
+        /* Floating Animation */
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        /* Pulse Ring Animation */
+        .pulse-ring {
+            animation: pulseRing 2s ease-out infinite;
+        }
+        
+        @keyframes pulseRing {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(2); opacity: 0; }
+        }
+        
+        /* ═══════════════════════════════════════════════════════════════════════
+           CALCULATOR SLIDER ENHANCEMENTS - MOBILE FRIENDLY
+        ═══════════════════════════════════════════════════════════════════════ */
+        .calculator-slider-container {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .calculator-slider-container:last-of-type {
+            margin-bottom: 0.5rem;
+            border-bottom: none;
+        }
+        
+        /* ═══════════════════════════════════════════════════════════════════════════════
+           CALCULATOR RANGE SLIDER - BASE STYLES
+        ═══════════════════════════════════════════════════════════════════════ */
+        .calculator-range {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            display: block;
+            height: 8px;
+            background: linear-gradient(to right, #F59E0B 0%, #D97706 100%);
+            border-radius: 4px;
+            outline: none;
+            cursor: pointer;
+        }
+        
+        /* Webkit track styling */
+        .calculator-range::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(to right, #F59E0B 0%, #D97706 100%);
+            border-radius: 4px;
+            border: none;
+        }
+        
+        /* Firefox track styling */
+        .calculator-range::-moz-range-track {
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(to right, #F59E0B 0%, #D97706 100%);
+            border-radius: 4px;
+            border: none;
+        }
+        
+        /* Desktop thumb - 20x20px proportional */
+        .calculator-range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 50%, #D97706 100%);
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.5), 0 2px 4px rgba(0, 0, 0, 0.3);
+            border: 2px solid #fff;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            position: relative;
+            z-index: 10;
+            margin-top: -6px;
+        }
+        
+        .calculator-range::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.7), 0 2px 6px rgba(0, 0, 0, 0.4);
+        }
+        
+        .calculator-range::-webkit-slider-thumb:active {
+            transform: scale(1.05);
+        }
+        
+        /* Firefox thumb - 20x20px */
+        .calculator-range::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 50%, #D97706 100%);
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.5), 0 2px 4px rgba(0, 0, 0, 0.3);
+            border: 2px solid #fff;
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* ═══════════════════════════════════════════════════════════════════════
+           MOBILE SLIDER FIXES - UNDER 768px
+        ═══════════════════════════════════════════════════════════════════════ */
+        @media (max-width: 767px) {
+            /* Mobile slider - LARGER and more visible */
+            .calculator-range {
+                width: 100% !important;
+                display: block;
+                height: 32px !important;
+                min-height: 32px;
+                -webkit-appearance: none;
+                appearance: none;
+                background: transparent !important;
+                border-radius: 8px;
+                outline: none;
+                cursor: pointer;
+                border: none;
+                padding: 10px 0;
+                position: relative;
+                z-index: 10;
+            }
+            
+            /* Mobile track - bigger visible track */
+            .calculator-range::-webkit-slider-runnable-track {
+                width: 100%;
+                height: 12px !important;
+                background: linear-gradient(to right, #F59E0B 0%, #D97706 100%);
+                border-radius: 6px;
+                border: none;
+            }
+            
+            .calculator-range::-moz-range-track {
+                width: 100%;
+                height: 12px !important;
+                background: linear-gradient(to right, #F59E0B 0%, #D97706 100%);
+                border-radius: 6px;
+                border: none;
+            }
+            
+            /* Mobile thumb - LARGER 28x28px touch-friendly */
+            .calculator-range::-webkit-slider-thumb {
+                width: 28px !important;
+                height: 28px !important;
+                background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 50%, #D97706 100%);
+                border-radius: 50%;
+                cursor: pointer;
+                box-shadow: 0 0 15px rgba(245, 158, 11, 0.8), 0 3px 8px rgba(0, 0, 0, 0.4);
+                border: 3px solid #fff !important;
+                -webkit-appearance: none;
+                appearance: none;
+                position: relative;
+                z-index: 1000;
+                margin-top: -8px;
+            }
+            
+            .calculator-range::-moz-range-thumb {
+                width: 28px !important;
+                height: 28px !important;
+                background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 50%, #D97706 100%);
+                border-radius: 50%;
+                cursor: pointer;
+                box-shadow: 0 0 15px rgba(245, 158, 11, 0.8), 0 3px 8px rgba(0, 0, 0, 0.4);
+                border: 3px solid #fff !important;
+                position: relative;
+                z-index: 1000;
+            }
+            
+            /* Slider container - ensure proper height */
+            .calculator-slider-container {
+                min-height: 100px;
+                padding-bottom: 1.5rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            /* Label spacing from track */
+            .calculator-slider-container label {
+                margin-bottom: 0.75rem;
+                display: block;
+            }
+            
+            /* Values spacing from track - 25px padding as requested */
+            .calculator-slider-container .flex.justify-between {
+                margin-top: 1.5rem !important;
+                padding-top: 0.75rem;
+                padding-bottom: 25px !important;
+            }
+            
+            /* Value display */
+            #capital-value, #trades-value {
+                min-width: 90px;
+                text-align: center;
+                padding: 0.5rem 0.75rem;
+                font-size: 0.9rem;
+            }
+            
+            /* Ensure input is touchable - make whole area clickable */
+            input[type="range"].calculator-range {
+                -webkit-tap-highlight-color: transparent;
+                touch-action: pan-x;
+            }
+            
+            /* Make sure container doesn't hide input */
+            .calculator-slider-container {
+                position: relative;
+                z-index: 1;
+                overflow: visible;
+            }
+        }
+        
+        /* Desktop: Same size as mobile for consistency, or slightly larger */
+        @media (min-width: 768px) {
+            .calculator-range::-webkit-slider-thumb {
+                width: 22px;
+                height: 22px;
+                margin-top: -7px;
+            }
+            .calculator-range::-moz-range-thumb {
+                width: 22px;
+                height: 22px;
+            }
+            .calculator-slider-container {
+                margin-bottom: 1rem;
+            }
+        }
+        
+        /* Calculator value display */
+        #capital-value, #trades-value {
+            min-width: 90px;
+            text-align: center;
+            padding: 0.35rem 0.5rem;
+        }
+        
+        /* ═══════════════════════════════════════════════════════════════════════
+           NAVIGATION MOBILE ALIGNMENT
+        ═══════════════════════════════════════════════════════════════════════ */
+        .nav-container {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .nav-inner {
+            background: rgba(24, 24, 27, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        /* Mobile Touch Optimizations */
+        @media (max-width: 767px) {
+            /* ═══ GENERAL MOBILE POLISH ═══ */
+            
+            /* Force single column grids on mobile */
+            .grid[class*="grid-cols-"] {
+                grid-template-columns: 1fr !important;
+            }
+            
+            /* Remove column spans on mobile */
+            [class*="col-span-"], [class*="lg:col-span-"] {
+                grid-column: span 1 !important;
+            }
+            
+            /* Glass effect on mobile */
+            .glass {
+                background: rgba(24, 24, 27, 0.95);
+                border: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            /* ═══════════════════════════════════════════════════════════════════════
+               NAVIGATION BAR FLEX ALIGNMENT - MOBILE
+            ═══════════════════════════════════════════════════════════════════════ */
+            
+            /* Mobile nav container - flex alignment */
+            nav#navbar > div {
+                padding: 12px 16px !important;
+            }
+            
+            /* Nav inner - flex row with space-between and center alignment */
+            nav#navbar > div > div {
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                flex-direction: row !important;
+            }
+            
+            /* Ensure logo and hamburger are on same baseline */
+            nav#navbar .nav-logo {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+            }
+            
+            /* Hamburger button - centered vertically */
+            #mobile-menu-btn {
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            /* ═══ CENTRALIZED VERTICAL LAYOUT FOR INPUTS & RESULTS ═══ */
+            
+            /* Form inputs - centralized with proper spacing */
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            input[type="number"],
+            select,
+            textarea {
+                width: 100%;
+                padding: 0.875rem 1rem;
+                font-size: 1rem;
+                line-height: 1.5;
+                border-radius: 0.75rem;
+                background: #18181b;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            /* Buttons - full width with proper padding */
+            button,
+            .btn,
+            a.btn,
+            a[role="button"] {
+                width: 100%;
+                min-height: 52px;
+                padding: 0.875rem 1.5rem;
+                font-size: 1rem;
+                font-weight: 600;
+                border-radius: 0.75rem;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+            }
+            
+            /* Calculator Results - centralized vertical layout */
+            .calculator-inputs > div {
+                margin-bottom: 1.75rem;
+                padding-bottom: 1.5rem;
+            }
+            
+            /* Result blocks - clean vertical stacking */
+            .calculator-inputs + div > div,
+            .space-y-4 > div,
+            .space-y-6 > div {
+                margin-bottom: 1rem;
+                padding: 1.25rem;
+                border-radius: 0.75rem;
+                text-align: center;
+            }
+            
+            /* Large result numbers - proper sizing */
+            .text-3xl, .text-4xl, .text-5xl {
+                font-size: 2rem !important;
+                line-height: 1.2;
+                margin: 0.5rem 0;
+            }
+            
+            /* Result labels - proper spacing */
+            .text-white\/60,
+            .text-white\/40,
+            .text-white\/50 {
+                font-size: 0.75rem !important;
+                margin-bottom: 0.25rem;
+            }
+            
+            /* Hero section mobile */
+            .hero-section {
+                padding-top: 100px !important;
+                padding-bottom: 60px !important;
+            }
+            
+            .hero-section h1 {
+                font-size: 2rem !important;
+                line-height: 1.2 !important;
+            }
+            
+            .hero-section p {
+                font-size: 1rem !important;
+            }
+            
+            /* Form mobile - vertical stack with proper margins */
+            .hero-form {
+                padding: 1.5rem !important;
+                text-align: center;
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            /* Form - vertical stack */
+            .hero-form form {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap: 1.25rem;
+            }
+            
+            /* Grid inputs - convert to vertical stack */
+            .hero-form .grid {
+                display: flex !important;
+                flex-direction: column;
+                width: 100%;
+                gap: 1.25rem !important;
+            }
+            
+            /* Input fields - proper sizing */
+            .hero-form input {
+                font-size: 1rem !important;
+                padding: 0.875rem 1rem !important;
+                min-height: 52px !important;
+                width: 100% !important;
+            }
+            
+            /* Button - proper spacing from inputs */
+            .hero-form button {
+                padding: 1rem !important;
+                font-size: 1rem !important;
+                width: 100% !important;
+                margin-top: 0.5rem;
+            }
+            
+            /* Form fields with labels */
+            .hero-form .grid > div {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .hero-form .grid > div label {
+                text-align: left;
+            }
+            
+            /* Signal widget mobile */
+            .signal-widget {
+                padding: 1rem !important;
+            }
+            
+            .signal-widget .grid-cols-3 {
+                grid-template-columns: 1fr !important;
+                gap: 0.5rem !important;
+            }
+            
+            .signal-widget .text-lg {
+                font-size: 1rem !important;
+            }
+            
+            .signal-widget .text-3xl {
+                font-size: 1.5rem !important;
+            }
+            
+            /* Mentor card mobile */
+            .mentor-card {
+                padding: 1rem !important;
+            }
+            
+            .mentor-card img {
+                width: 60px !important;
+                height: 60px !important;
+            }
+            
+            /* Section padding mobile */
+            section {
+                padding: 40px 0 !important;
+            }
+            
+            section h2 {
+                font-size: 1.75rem !important;
+            }
+            
+            /* Pricing cards mobile */
+            .pricing-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+            
+            .pricing-card {
+                padding: 1rem !important;
+            }
+            
+            .pricing-card .text-3xl {
+                font-size: 1.75rem !important;
+            }
+            
+            /* Calculator mobile */
+            .calculator-section {
+                padding: 1rem !important;
+            }
+            
+            .calculator-section input[type="range"] {
+                width: 100% !important;
+            }
+            
+            /* Footer mobile */
+            footer {
+                padding: 30px 0 !important;
+            }
+            
+            footer .grid {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+            
+            /* Button sizes mobile */
+            button, .btn {
+                min-height: 48px;
+                min-width: 100%;
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+            
+            input, select, textarea {
+                min-height: 48px;
+                font-size: 16px !important;
+                padding: 12px !important;
+            }
+            
+            /* Disable hover effects on mobile */
+            .hover-lift:hover {
+                transform: none;
+            }
+            
+            /* Horizontal scroll fix */
+            * {
+                overflow-x: hidden;
+                max-width: 100vw;
+            }
+            
+            /* Image sizes mobile */
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            /* Hide horizontal overflow */
+            body {
+                overflow-x: hidden;
+            }
+            
+            /* Force vertical layout on mobile */
+            .hero-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            /* Fix signal widget */
+            .signal-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            /* Full width buttons */
+            .btn-full {
+                width: 100% !important;
+            }
+            
+            /* Hide large images on mobile */
+            .hide-mobile {
+                display: none !important;
+            }
+        }
+        
+        /* Extra Small Mobile (320px - 479px) */
+        @media (max-width: 479px) {
+            .container {
+                padding-left: 12px !important;
+                padding-right: 12px !important;
+            }
+            
+            h1 {
+                font-size: 1.75rem !important;
+            }
+            
+            h2 {
+                font-size: 1.5rem !important;
+            }
+            
+            h3 {
+                font-size: 1.25rem !important;
+            }
+            
+            .glass {
+                padding: 12px !important;
+            }
+            
+            .text-xl {
+                font-size: 1rem !important;
+            }
+            
+            .text-2xl {
+                font-size: 1.25rem !important;
+            }
+            
+            .text-3xl {
+                font-size: 1.5rem !important;
+            }
+            
+            .text-4xl {
+                font-size: 1.75rem !important;
+            }
+            
+            .p-6 {
+                padding: 12px !important;
+            }
+            
+            .gap-6 {
+                gap: 12px !important;
+            }
+            
+            /* Tiny spacing for small screens */
+            .space-y-6 > :not([hidden]) ~ :not([hidden]) {
+                margin-top: 12px;
+            }
+            
+            /* WhatsApp button small screens */
+            .whatsapp-btn {
+                bottom: 80px !important;
+                right: 10px !important;
+            }
+        }
+        
+        /* Small Mobile (480px - 767px) */
+        @media (min-width: 480px) and (max-width: 767px) {
+            h1 {
+                font-size: 2rem !important;
+            }
+            
+            h2 {
+                font-size: 1.75rem !important;
+            }
+            
+            .text-4xl {
+                font-size: 2rem !important;
+            }
+        }
+        
+        /* Tablet (768px - 1023px) */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            h1 {
+                font-size: 2.5rem !important;
+            }
+            
+            .hero-section {
+                padding-top: 120px !important;
+            }
+            
+            section {
+                padding: 50px 0 !important;
+            }
+            
+            /* Tablet grid fixes */
+            .grid-cols-2 {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            }
+            
+            .grid-cols-3 {
+                grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+            }
+            
+            /* Adjust spacing */
+            .gap-8 {
+                gap: 24px !important;
+            }
+            
+            .gap-12 {
+                gap: 32px !important;
+            }
+        }
+        
+        /* Small Desktop (1024px - 1279px) */
+        @media (min-width: 1024px) and (max-width: 1279px) {
+            h1 {
+                font-size: 3rem !important;
+            }
+            
+            .container {
+                max-width: 960px !important;
+            }
+        }
+        
+        /* Large Desktop (1280px - 1535px) */
+        @media (min-width: 1280px) and (max-width: 1535px) {
+            .container {
+                max-width: 1200px !important;
+            }
+        }
+        
+        /* Extra Large Desktop (1536px - 1920px) */
+        @media (min-width: 1536px) {
+            .container {
+                max-width: 1400px !important;
+            }
+            
+            h1 {
+                font-size: 4rem !important;
+            }
+        }
+        
+        /* Prevent text selection on buttons */
+        button, .btn {
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+        }
+        
+        /* Chart line glow */
+        .chart-glow {
+            filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.8));
+        }
+        
+        /* Floating badges animation */
+        @keyframes float-badge {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .float-badge {
+            animation: float-badge 4s ease-in-out infinite;
+        }
+        
+        /* ═══════════════════════════════════════════════════════════════════════
+           WHATSAPP BUTTON - PROPER MOBILE PADDING
+        ═══════════════════════════════════════════════════════════════════════ */
+        .fixed.bottom-5.right-5 {
+            /* Ensure 20px padding from bottom and right on mobile */
+            bottom: 20px !important;
+            right: 20px !important;
+        }
+        
+        @media (min-width: 640px) {
+            .fixed.bottom-5.right-5 {
+                bottom: 1.5rem !important;
+                right: 1.5rem !important;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 bg-gold-500 text-black px-4 py-2 rounded-lg font-semibold">
+        Skip to main content
+    </a>
+    
+    <!-- Ticker Tape - Hide on very small screens, show on mobile+ -->
+    <div class="fixed top-0 left-0 w-full z-40 bg-black/90 backdrop-blur-sm border-b border-white/5 py-1.5 md:py-2 overflow-hidden" style="height: 40px;">
+        <div class="flex whitespace-nowrap marquee items-center">
+            <!-- Reduced spacing for mobile, more spacing on larger screens -->
+            <span class="mx-4 md:mx-8 text-emerald-500 font-semibold text-xs md:text-sm">XAU/USD: <span class="gold-live-price">$2,342.50</span> <span class="text-emerald-500">▲</span></span>
+            <span class="mx-4 md:mx-8 text-white/60 text-xs md:text-sm">GOLD <span class="gold-live-price">▲ 0.85%</span></span>
+            <span class="mx-4 md:mx-8 text-emerald-500 font-semibold text-xs md:text-sm">BTC: <span id="btc-price">$67,420</span> <span id="btc-arrow" class="text-emerald-500">▲</span></span>
+            <span class="mx-4 md:mx-8 text-white/60 text-xs md:text-sm">|</span>
+            <span class="mx-4 md:mx-8 text-emerald-500 font-semibold text-xs md:text-sm">XAU/USD: <span class="gold-live-price">$2,342.50</span> <span class="text-emerald-500">▲</span></span>
+            <span class="mx-4 md:mx-8 text-white/60 text-xs md:text-sm">GOLD <span class="gold-live-price">▲ 0.85%</span></span>
+            <span class="mx-4 md:mx-8 text-emerald-500 font-semibold text-xs md:text-sm">BTC: <span id="btc-price">$67,420</span> <span id="btc-arrow" class="text-emerald-500">▲</span></span>
+            <span class="mx-4 md:mx-8 text-white/60 text-xs md:text-sm">|</span>
+        </div>
+    </div>
+
+    <!-- Navigation - Fixed top, proper z-index -->
+    <nav class="fixed top-[40px] left-0 right-0 z-50 transition-all duration-300 nav-container" id="navbar">
+        <div class="max-w-7xl mx-auto px-2 sm:px-4">
+            <div class="glass rounded-xl mx-1 mt-1 nav-inner">
+                <div class="flex items-center justify-between h-16 lg:h-20 px-3 lg:px-6">
+                    <!-- Logo - Left aligned with proper vertical centering -->
+                    <a href="#" class="flex items-center gap-2 group flex-shrink-0 nav-logo h-full">
+                        <div class="w-10 h-10 lg:w-10 lg:h-10 rounded-lg lg:rounded-xl bg-gradient-to-br from-gold-500 to-gold-700 flex items-center justify-center shadow-lg shadow-gold-500/20 group-hover:scale-105 transition-transform">
+                            <i class="fas fa-chart-line text-white text-base lg:text-lg"></i>
+                        </div>
+                        <span class="text-lg lg:text-xl font-bold font-display text-white hidden xs:hidden sm:block">The Trading<span class="gold-gradient">Mentors</span></span>
+                    </a>
+                    
+                    <!-- Desktop Menu - Hidden on mobile, shown on lg+ -->
+                    <div class="hidden lg:flex items-center gap-6 xl:gap-8">
+                        <a href="#technology" class="text-white/70 hover:text-gold-400 transition-colors font-medium text-sm">Technology</a>
+                        <a href="#mentor" class="text-white/70 hover:text-gold-400 transition-colors font-medium text-sm">Meet Chris</a>
+                        <a href="#performance" class="text-white/70 hover:text-gold-400 transition-colors font-medium text-sm">Performance</a>
+                        <a href="#pricing" class="text-white/70 hover:text-gold-400 transition-colors font-medium text-sm">Pricing</a>
+                        <a href="#calculator" class="text-white/70 hover:text-gold-400 transition-colors font-medium text-sm">ROI Calculator</a>
+                    </div>
+                    
+                    <!-- CTA Button - Hidden on mobile, shown on lg+ -->
+                    <div class="hidden lg:block flex-shrink-0">
+                        <a href="#get-started" class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-gold-500 to-gold-600 text-black font-bold rounded-lg hover:shadow-lg hover:shadow-gold-500/30 transition-all hover-lift text-sm">
+                            <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                            Live Signals
+                        </a>
+                    </div>
+                    
+                    <!-- Mobile Menu Button - More visible, 44px touch target -->
+                    <button class="lg:hidden flex items-center justify-center w-12 h-12 text-white text-2xl rounded-lg hover:bg-white/20 active:bg-white/30 transition-colors cursor-pointer" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" type="button">
+                        <i class="fas fa-bars pr-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu - Slide down panel with proper z-index -->
+        <div class="lg:hidden glass mx-1 mt-1 rounded-xl p-4 absolute top-full left-0 right-0 z-50" id="mobile-menu" role="navigation" aria-label="Mobile navigation" style="display: none;">
+            <div class="flex flex-col gap-1">
+                <a href="#technology" class="text-white/80 hover:text-gold-400 transition-colors font-medium py-4 px-4 rounded-lg hover:bg-white/10 text-base">Technology</a>
+                <a href="#mentor" class="text-white/80 hover:text-gold-400 transition-colors font-medium py-4 px-4 rounded-lg hover:bg-white/10 text-base">Meet Chris</a>
+                <a href="#performance" class="text-white/80 hover:text-gold-400 transition-colors font-medium py-4 px-4 rounded-lg hover:bg-white/10 text-base">Performance</a>
+                <a href="#pricing" class="text-white/80 hover:text-gold-400 transition-colors font-medium py-4 px-4 rounded-lg hover:bg-white/10 text-base">Pricing</a>
+                <a href="#calculator" class="text-white/80 hover:text-gold-400 transition-colors font-medium py-4 px-4 rounded-lg hover:bg-white/10 text-base">ROI Calculator</a>
+                <hr class="border-white/10 my-2">
+                <a href="#get-started" class="inline-flex items-center justify-center gap-2 px-4 py-4 bg-gradient-to-r from-gold-500 to-gold-600 text-black font-bold rounded-lg text-base font-semibold">
+                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                    Live Signals
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen pt-28 pb-20 overflow-hidden hero-section">
+        <!-- Enhanced Mesh Gradient Backgrounds with Animation -->
+        <div class="mesh-gradient w-[500px] h-[500px] bg-gold-500/15 -top-40 -left-40 animate-pulse-slow"></div>
+        <div class="mesh-gradient w-[400px] h-[400px] bg-emerald-500/10 top-1/3 -right-20 animate-pulse-slow" style="animation-delay: 1s;"></div>
+        <div class="mesh-gradient w-[600px] h-[600px] bg-gold-500/10 bottom-0 left-1/4 animate-pulse-slow" style="animation-delay: 2s;"></div>
+        
+        <!-- Subtle Grid Pattern Overlay -->
+        <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 50px 50px;"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+                <!-- Left Content -->
+                <div class="text-center lg:text-left animate-fade-in-up">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-500/10 border border-gold-500/20 mb-6">
+                        <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+                        <span class="text-gold-400 text-sm font-semibold">Live Trading Active</span>
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6">
+                        Institutional-Grade<br>
+                        <span class="gold-gradient">Gold Trading System</span>
+                    </h1>
+                    
+                    <p class="text-lg sm:text-xl text-white/60 mb-8 max-w-xl mx-auto lg:mx-0">
+                        Join 2,400+ elite traders using our AI-powered signals, automated risk management, and millisecond execution. Start generating consistent returns today.
+                    </p>
+                    
+                    <!-- Lead Capture Form -->
+                    <div class="bg-dark-800/50 rounded-2xl px-4 py-6 sm:p-6 border border-white/5 backdrop-blur-sm hero-form" id="get-started">
+                        <h3 class="text-white font-semibold mb-4">Get Your Free Trading Signals</h3>
+                        <form class="space-y-4" onsubmit="handleSubmit(event)" aria-label="Get free trading signals">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div class="space-y-2">
+                                    <label for="name" class="sr-only">Your Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Your Name" required autocomplete="name" class="w-full px-4 py-3 bg-dark-900 border border-white/10 rounded-xl text-white placeholder-white/30 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none transition-all">
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="email" class="sr-only">Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="Email Address" required autocomplete="email" class="w-full px-4 py-3 bg-dark-900 border border-white/10 rounded-xl text-white placeholder-white/30 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none transition-all">
+                                </div>
+                            </div>
+                            <button type="submit" class="w-full py-4 bg-gradient-to-r from-gold-500 to-gold-600 text-black font-bold rounded-xl hover:shadow-lg hover:shadow-gold-500/30 transition-all hover-lift">
+                                <i class="fas fa-rocket mr-2"></i> Start Free Trial
+                            </button>
+                        </form>
+                        <p class="text-white/40 text-sm mt-3 text-center">
+                            <i class="fas fa-shield-alt mr-1"></i> No credit card required • 7-day free trial
+                        </p>
+                    </div>
+                    
+                    <!-- Trust Badges -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-6 mt-8 text-white/40 text-sm">
+                        <span><i class="fas fa-user-shield mr-2 text-gold-500"></i>2,400+ Active Traders</span>
+                        <span><i class="fas fa-chart-pie mr-2 text-gold-500"></i>$48M+ Traded</span>
+                    </div>
+                </div>
+                
+                <!-- Right Content - Signal Widget + Chris Photo -->
+                <div class="animate-fade-in-up stagger-2 space-y-6">
+                    <!-- Elite Signal Widget with Dynamic Chart -->
+                    <div class="glass rounded-2xl px-4 py-6 sm:p-6 border border-gold-500/30 relative overflow-hidden signal-widget gold-shimmer">
+                        <!-- Glowing Chart Background -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-gold-500/10 via-emerald-500/5 to-transparent"></div>
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-gold-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
+                        <div class="absolute bottom-0 left-0 w-60 h-20 bg-gradient-to-t from-emerald-500/15 to-transparent"></div>
+                        
+                        <!-- Animated corner accents -->
+                        <div class="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-gold-500/30 rounded-tl-2xl"></div>
+                        <div class="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-gold-500/30 rounded-tr-2xl"></div>
+                        <div class="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-gold-500/30 rounded-bl-2xl"></div>
+                        <div class="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-gold-500/30 rounded-br-2xl"></div>
+                        
+                        <!-- Dynamic Live Chart SVG -->
+                        <div class="absolute inset-0 opacity-30">
+                            <svg class="w-full h-full" viewBox="0 0 300 100" preserveAspectRatio="none">
+                                <defs>
+                                    <linearGradient id="eliteGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" stop-color="#10B981" stop-opacity="0.4"/>
+                                        <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M0,100 L0,75 Q30,70 60,55 T120,45 T180,30 T240,25 T300,15 L300,100 Z" fill="url(#eliteGradient)"/>
+                                <path d="M0,75 Q30,70 60,55 T120,45 T180,30 T240,25 T300,15" fill="none" stroke="#10B981" stroke-width="2" class="drop-shadow-[0_0_8px_rgba(16,185,129,0.8)]"/>
+                                <!-- Animated dot -->
+                                <circle cx="300" cy="15" r="4" fill="#10B981" class="animate-ping"/>
+                            </svg>
+                        </div>
+                        
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold-500 to-gold-700 flex items-center justify-center shadow-lg shadow-gold-500/20">
+                                        <i class="fas fa-gem text-white"></i>
+                                    </div>
+                                    <div>
+                                        <span class="font-bold text-white text-lg">XAU/USD</span>
+                                        <span class="text-emerald-500 font-bold ml-2">▲ 0.85%</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+                                    <span class="px-3 py-1 bg-emerald-500/20 text-emerald-500 rounded-full text-xs font-semibold">LIVE</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Dynamic Mini Chart -->
+                            <div class="h-24 mb-4 relative">
+                                <svg class="absolute bottom-0 left-0 w-full h-full" viewBox="0 0 300 96" preserveAspectRatio="none">
+                                    <path d="M0,96 L0,70 Q40,65 80,50 T160,40 T240,25 T300,15 L300,96 Z" fill="url(#eliteChartGradient)" opacity="0.5"/>
+                                    <path d="M0,70 Q40,65 80,50 T160,40 T240,25 T300,15" fill="none" stroke="#10B981" stroke-width="3" class="drop-shadow-[0_0_10px_rgba(16,185,129,0.9)]"/>
+                                    <defs>
+                                        <linearGradient id="eliteChartGradient" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="0%" stop-color="#10B981"/>
+                                            <stop offset="100%" stop-color="transparent"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <!-- Live price indicator -->
+                                <div class="absolute top-2 right-2 px-2 py-1 bg-emerald-500/20 rounded text-emerald-500 text-xs font-bold">
+                                    $2,342.50
+                                </div>
+                            </div>
+                            
+                            <!-- Entry/Target/Stop with Visual Cues -->
+                            <div class="grid grid-cols-3 sm:grid-cols-3 gap-2 sm:gap-3">
+                                <div class="bg-dark-900/80 rounded-lg p-3 text-center border border-white/5">
+                                    <p class="text-white/50 text-xs mb-1">ENTRY</p>
+                                    <p class="text-white font-bold text-lg">2,342.50</p>
+                                    <div class="w-full h-0.5 bg-gold-500/50 mt-1 rounded"></div>
+                                </div>
+                                <div class="bg-dark-900/80 rounded-lg p-3 text-center border border-emerald-500/30 relative overflow-hidden">
+                                    <div class="absolute inset-0 bg-emerald-500/5"></div>
+                                    <p class="text-emerald-500 text-xs mb-1 flex items-center justify-center gap-1">
+                                        TARGET
+                                        <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></span>
+                                    </p>
+                                    <p class="text-emerald-500 font-bold text-lg">2,356.80</p>
+                                    <div class="w-full h-0.5 bg-emerald-500 mt-1 rounded shadow-[0_0_8px_rgba(16,185,129,0.5)]"></div>
+                                </div>
+                                <div class="bg-dark-900/80 rounded-lg p-3 text-center border border-red-500/30 relative overflow-hidden">
+                                    <div class="absolute inset-0 bg-red-500/5"></div>
+                                    <p class="text-red-500 text-xs mb-1 flex items-center justify-center gap-1">
+                                        STOP
+                                        <i class="fas fa-exclamation-circle text-red-500 text-xs"></i>
+                                    </p>
+                                    <p class="text-red-500 font-bold text-lg">2,328.20</p>
+                                    <div class="w-full h-0.5 bg-red-500 mt-1 rounded shadow-[0_0_8px_rgba(239,68,68,0.5)]"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-4 flex gap-2 flex-wrap">
+                                <span class="px-3 py-1 bg-gold-500/20 text-gold-500 rounded-full text-xs font-semibold border border-gold-500/30">HIGH CONFIDENCE</span>
+                                <span class="px-3 py-1 bg-white/5 text-white/70 rounded-full text-xs border border-white/10">R:R 1:3</span>
+                                <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 rounded-full text-xs border border-emerald-500/20">P: 94.7%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Premium Chris Mentor Card with Golden Glow -->
+                    <div class="glass rounded-2xl p-5 border border-gold-500/30 flex items-center gap-4 hover:border-gold-500/60 transition-all group hover:shadow-[0_0_30px_rgba(245,158,11,0.2)]">
+                        <!-- Elegant Circular Avatar with Golden Glow -->
+                        <div class="relative flex-shrink-0">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-gold-500 to-gold-600 rounded-full blur-md opacity-50 group-hover:opacity-80 transition-opacity"></div>
+                            <div class="relative w-20 h-20 rounded-full overflow-hidden border-2 border-gold-500/60 shadow-[0_0_15px_rgba(245,158,11,0.3)]">
+                                <img src="./owner.webp" alt="Chris - Your Mentor" class="w-full h-full object-cover" loading="eager" decoding="async" width="80" height="80">
+                            </div>
+                            <!-- Online status indicator -->
+                            <div class="absolute bottom-1 right-1 w-4 h-4 bg-emerald-500 rounded-full border-2 border-dark-900"></div>
+                        </div>
+                        
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-center gap-2">
+                                <h4 class="text-white font-bold text-lg">Chris</h4>
+                                <span class="w-1.5 h-1.5 bg-gold-500 rounded-full"></span>
+                            </div>
+                            <p class="text-gold-500 text-sm font-semibold">40+ Year Veteran Trader</p>
+                            <p class="text-white/50 text-xs mt-1 truncate">"I've helped 2,400+ traders achieve consistent profits..."</p>
+                        </div>
+                        
+                        <!-- Arrow icon -->
+                        <div class="w-8 h-8 rounded-full bg-gold-500/10 flex items-center justify-center text-gold-500/60 group-hover:text-gold-500 group-hover:bg-gold-500/20 transition-all">
+                            <i class="fas fa-arrow-right text-sm"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-dark-900/50 border-y border-white/5 relative overflow-hidden">
+        <!-- Background glow -->
+        <div class="absolute top-0 left-1/4 w-64 h-64 bg-gold-500/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-1/4 w-64 h-64 bg-emerald-500/5 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center group">
+                    <div class="relative inline-block">
+                        <div class="text-4xl lg:text-5xl font-bold gold-gradient mb-2 group-hover:scale-110 transition-transform">94.7%</div>
+                        <div class="absolute -inset-4 bg-gold-500/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="text-white/60 font-medium">Win Rate</div>
+                </div>
+                <div class="text-center group">
+                    <div class="relative inline-block">
+                        <div class="text-4xl lg:text-5xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">$48M+</div>
+                    </div>
+                    <div class="text-white/60 font-medium">Total Traded</div>
+                </div>
+                <div class="text-center group">
+                    <div class="relative inline-block">
+                        <div class="text-4xl lg:text-5xl font-bold text-emerald-500 mb-2 group-hover:scale-110 transition-transform">3,200+</div>
+                        <div class="absolute -inset-4 bg-emerald-500/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="text-white/60 font-medium">Profitable Trades</div>
+                </div>
+                <div class="text-center group">
+                    <div class="relative inline-block">
+                        <div class="text-4xl lg:text-5xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">0.02s</div>
+                    </div>
+                    <div class="text-white/60 font-medium">Avg Execution</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Meet Your Mentor Section -->
+    <section class="py-24 relative overflow-hidden" id="mentor">
+        <div class="mesh-gradient w-[500px] h-[500px] bg-gold-500/10 top-0 left-0"></div>
+        <div class="mesh-gradient w-[400px] h-[400px] bg-emerald-500/10 bottom-0 right-0"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-500/10 border border-gold-500/20 mb-6">
+                    <i class="fas fa-user-tie text-gold-500"></i>
+                    <span class="text-gold-400 text-sm font-semibold">Your Mentor</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                    Meet <span class="gold-gradient">Chris</span>
+                </h2>
+                <p class="text-white/60 text-lg max-w-2xl mx-auto">
+                    40+ years of trading experience, dedicated to helping you achieve financial freedom
+                </p>
+            </div>
+            
+            <!-- Premium Split Grid Layout - Stack on mobile, 12-col on lg -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+                <!-- Left: Cinematic Lifestyle Image Frame -->
+                <div class="lg:col-span-7 relative animate-fade-in-up order-1">
+                    <!-- Outer glow -->
+                    <div class="absolute -inset-1 bg-gradient-to-r from-gold-500/40 via-gold-600/20 to-emerald-500/40 rounded-3xl blur-xl"></div>
+                    
+                    <!-- Main image container with gold accent border -->
+                    <div class="relative h-[500px] rounded-3xl overflow-hidden border-2 border-gold-500/40 shadow-[0_0_40px_rgba(245,158,11,0.15)]">
+                        <!-- Background gradient overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900"></div>
+                        
+                        <!-- Image -->
+                        <img src="./owner.webp" alt="Chris - Elite Gold Trading Expert at His Trading Desk" class="w-full h-full object-cover" loading="lazy">
+                        
+                        <!-- Overlay gradient for text readability -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/50 to-transparent"></div>
+                        
+                        <!-- Bottom info bar -->
+                        <div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-dark-900 to-transparent">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h4 class="text-white font-bold text-xl">Chris, Founder</h4>
+                                    <p class="text-gold-500 text-sm">40+ Years Trading Experience</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></span>
+                                    <span class="text-emerald-500 text-sm font-medium">Live Trading</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Decorative corner accents -->
+                        <div class="absolute top-4 left-4 w-12 h-12 border-t-2 border-l-2 border-gold-500/50 rounded-tl-lg"></div>
+                        <div class="absolute top-4 right-4 w-12 h-12 border-t-2 border-r-2 border-gold-500/50 rounded-tr-lg"></div>
+                        <div class="absolute bottom-4 left-4 w-12 h-12 border-b-2 border-l-2 border-gold-500/50 rounded-bl-lg"></div>
+                        <div class="absolute bottom-4 right-4 w-12 h-12 border-b-2 border-r-2 border-gold-500/50 rounded-br-lg"></div>
+                    </div>
+                    
+                    <!-- Floating stats badges -->
+                    <div class="absolute -right-4 top-1/3 glass rounded-xl p-4 border border-gold-500/30 shadow-xl">
+                        <div class="text-center">
+                            <p class="text-3xl font-bold gold-gradient">40+</p>
+                            <p class="text-white/50 text-xs">Years</p>
+                        </div>
+                    </div>
+                    <div class="absolute -right-4 top-2/3 glass rounded-xl p-4 border border-emerald-500/30 shadow-xl">
+                        <div class="text-center">
+                            <p class="text-3xl font-bold text-emerald-500">$48M</p>
+                            <p class="text-white/50 text-xs">Traded</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right: Clean High-Contrast Typography - Order 2 on mobile, col-5 on lg -->
+                <div class="lg:col-span-5 flex flex-col justify-center animate-fade-in-up stagger-2 space-y-4 md:space-y-6 order-2">
+                    <div>
+                        <h3 class="text-2xl lg:text-3xl font-bold text-white mb-4 leading-tight">
+                            Your Guide to <span class="gold-gradient">Gold Trading Success</span>
+                        </h3>
+                        <p class="text-white/70 text-lg leading-relaxed mb-6">
+                            For over <span class="text-gold-500 font-semibold">four decades</span>, I've navigated every market condition imaginable — from golden bull runs to economic crises. I've earned my stripes through both spectacular wins and humbling losses, and every lesson shaped the system I now share with you.
+                        </p>
+                        <p class="text-white/60 leading-relaxed">
+                            After 40+ years of refining my strategies, I built <span class="text-gold-500 font-semibold">The Trading Mentors Gold Reversal System</span> — designed to help you catch market turning points before everyone else. My mission is simple: help <span class="text-emerald-500 font-semibold">10,000 traders</span> achieve financial independence through disciplined, data-driven gold trading.
+                        </p>
+                    </div>
+                    
+                    <!-- Experience badges -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="glass rounded-xl p-4 border border-gold-500/20 hover:border-gold-500/40 transition-all">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-gold-500/10 flex items-center justify-center">
+                                    <i class="fas fa-award text-gold-500"></i>
+                                </div>
+                                <div>
+                                    <p class="text-white font-bold">40+ Years</p>
+                                    <p class="text-white/40 text-xs">Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glass rounded-xl p-4 border border-emerald-500/20 hover:border-emerald-500/40 transition-all">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center">
+                                    <i class="fas fa-chart-line text-emerald-500"></i>
+                                </div>
+                                <div>
+                                    <p class="text-white font-bold">$48M+</p>
+                                    <p class="text-white/40 text-xs">Total Traded</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glass rounded-xl p-4 border border-gold-500/20 hover:border-gold-500/40 transition-all">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-gold-500/10 flex items-center justify-center">
+                                    <i class="fas fa-users text-gold-500"></i>
+                                </div>
+                                <div>
+                                    <p class="text-white font-bold">2,400+</p>
+                                    <p class="text-white/40 text-xs">Traders Mentored</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glass rounded-xl p-4 border border-emerald-500/20 hover:border-emerald-500/40 transition-all">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center">
+                                    <i class="fas fa-trophy text-emerald-500"></i>
+                                </div>
+                                <div>
+                                    <p class="text-white font-bold">94.7%</p>
+                                    <p class="text-white/40 text-xs">Win Rate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quote -->
+                    <div class="relative">
+                        <div class="absolute -left-2 top-0 text-4xl text-gold-500/30">"</div>
+                        <blockquote class="pl-6 py-4 border-l-2 border-gold-500">
+                            <p class="text-gold-400 text-lg font-medium italic">My goal isn't just to give you signals — it's to make you a <span class="text-white">self-sufficient, profitable trader for life.</span></p>
+                            <p class="text-white/50 text-sm mt-3">— Chris, Founder of The Trading Mentors</p>
+                        </blockquote>
+                    </div>
+                    
+                    <!-- CTA Button -->
+                    <button class="w-full py-4 bg-gradient-to-r from-gold-500 to-gold-600 text-black font-bold rounded-xl hover:shadow-lg hover:shadow-gold-500/30 transition-all hover-lift">
+                        <i class="fas fa-handshake mr-2"></i> Start Learning from Chris
+                    </button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Bento Grid -->
+    <section class="py-24 relative" id="features">
+        <div class="mesh-gradient w-96 h-96 bg-emerald-500/10 -top-40 right-1/4"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                    Why Elite Traders Choose <span class="gold-gradient">Our System</span>
+                </h2>
+                <p class="text-white/60 text-lg max-w-2xl mx-auto">
+                    Institutional-grade technology meets retail accessibility. Everything you need to trade like a pro.
+                </p>
+            </div>
+            
+            <!-- Bento Grid - Single column on mobile, 2 on md, 3 on lg -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                <!-- Large Card -->
+                <div class="lg:col-span-2 group hover-lift">
+                    <div class="glass rounded-2xl p-8 h-full border border-white/5 hover:border-gold-500/30 transition-all relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-gold-500/5 rounded-full blur-2xl"></div>
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-gold-500 to-gold-700 flex items-center justify-center mb-6 shadow-lg shadow-gold-500/20">
+                                <i class="fas fa-bullseye text-2xl text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Precision Signals</h3>
+                            <p class="text-white/60 mb-6">
+                                Our proprietary algorithm analyzes 47+ market indicators in real-time, delivering entry, exit, and stop-loss signals with 94.7% accuracy. Every signal includes exact entry price, take profit targets, and risk-reward ratios.
+                            </p>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-3 py-1 bg-gold-500/10 text-gold-500 rounded-full text-sm">Entry Points</span>
+                                <span class="px-3 py-1 bg-gold-500/10 text-gold-500 rounded-full text-sm">Take Profit</span>
+                                <span class="px-3 py-1 bg-gold-500/10 text-gold-500 rounded-full text-sm">Stop Loss</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Medium Card -->
+                <div class="group hover-lift">
+                    <div class="glass rounded-2xl p-8 h-full border border-white/5 hover:border-emerald-500/30 transition-all relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-2xl"></div>
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center mb-6 shadow-lg shadow-emerald-500/20">
+                                <i class="fas fa-shield-alt text-2xl text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Risk Management</h3>
+                            <p class="text-white/60">
+                                Automated position sizing, maximum daily loss limits, and dynamic portfolio protection ensure you never blow your account.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Small Cards Row -->
+                <div class="group hover-lift">
+                    <div class="glass rounded-2xl p-8 h-full border border-white/5 hover:border-gold-500/30 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center mb-4">
+                            <i class="fas fa-bolt text-gold-500 text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">Millisecond Execution</h4>
+                        <p class="text-white/60 text-sm">
+                            Direct API connectivity to liquidity providers ensures your orders execute at the exact signal price, every time.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="group hover-lift">
+                    <div class="glass rounded-2xl p-8 h-full border border-white/5 hover:border-gold-500/30 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center mb-4">
+                            <i class="fas fa-mobile-alt text-gold-500 text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">Mobile Trading</h4>
+                        <p class="text-white/60 text-sm">
+                            Trade anywhere with our iOS and Android apps. Get real-time notifications and manage positions on the go.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="group hover-lift">
+                    <div class="glass rounded-2xl p-8 h-full border border-white/5 hover:border-gold-500/30 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center mb-4">
+                            <i class="fas fa-brain text-gold-500 text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">AI-Powered Analytics</h4>
+                        <p class="text-white/60 text-sm">
+                            Machine learning models continuously optimize strategies based on market conditions and historical data.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Verified Performance Section -->
+    <section class="py-24 bg-dark-900/50 relative" id="performance">
+        <div class="mesh-gradient w-96 h-96 bg-gold-500/10 top-0 right-0"></div>
+        <div class="mesh-gradient w-80 h-80 bg-emerald-500/10 bottom-0 left-0"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+                    <i class="fas fa-chart-bar text-emerald-500"></i>
+                    <span class="text-emerald-400 text-sm font-semibold">Verified Results</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                    Real <span class="gold-gradient">Performance</span> Data
+                </h2>
+                <p class="text-white/60 text-lg max-w-2xl mx-auto">
+                    Track record of 3,200+ profitable trades with complete transparency
+                </p>
+            </div>
+            
+            <!-- Performance Stats Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="glass rounded-2xl p-6 border border-gold-500/20 text-center">
+                    <div class="text-4xl font-bold gold-gradient mb-2">94.7%</div>
+                    <div class="text-white/60 text-sm">Win Rate</div>
+                    <div class="mt-2 h-2 bg-dark-800 rounded-full overflow-hidden">
+                        <div class="h-full w-[94.7%] bg-gradient-to-r from-gold-500 to-emerald-500 rounded-full"></div>
+                    </div>
+                </div>
+                <div class="glass rounded-2xl p-6 border border-emerald-500/20 text-center">
+                    <div class="text-4xl font-bold text-white mb-2">$48M+</div>
+                    <div class="text-white/60 text-sm">Total Traded</div>
+                </div>
+                <div class="glass rounded-2xl p-6 border border-gold-500/20 text-center">
+                    <div class="text-4xl font-bold text-emerald-500 mb-2">3,247</div>
+                    <div class="text-white/60 text-sm">Profitable Trades</div>
+                </div>
+                <div class="glass rounded-2xl p-6 border border-emerald-500/20 text-center">
+                    <div class="text-4xl font-bold text-white mb-2">1:3.5</div>
+                    <div class="text-white/60 text-sm">Avg Risk:Reward</div>
+                </div>
+            </div>
+            
+            <!-- Chart Mockup -->
+            <div class="glass rounded-3xl p-8 border border-white/10 mb-12">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-xl font-bold text-white">Monthly Performance</h3>
+                    <div class="flex gap-4 text-sm">
+                        <span class="text-emerald-500"><i class="fas fa-circle mr-1"></i>Profit</span>
+                        <span class="text-red-500"><i class="fas fa-circle mr-1"></i>Loss</span>
+                    </div>
+                </div>
+                <div class="h-64 flex items-end justify-between gap-2">
+                    <div class="flex-1 bg-emerald-500/20 rounded-t-lg relative" style="height: 85%">
+                        <div class="absolute bottom-0 w-full h-[85%] bg-gradient-to-t from-emerald-500 to-emerald-500/20 rounded-t-lg"></div>
+                    </div>
+                    <div class="flex-1 bg-emerald-500/20 rounded-t-lg relative" style="height: 72%">
+                        <div class="absolute bottom-0 w-full h-[72%] bg-gradient-to-t from-emerald-500 to-emerald-500/20 rounded-t-lg"></div>
+                    </div>
+                    <div class="flex-1 bg-emerald-500/20 rounded-t-lg relative" style="height: 90%">
+                        <div class="absolute bottom-0 w-full h-[90%] bg-gradient-to-t from-emerald-500 to-emerald-500/20 rounded-t-lg"></div>
+                    </div>
+                    <div class="flex-1 bg-emerald-500/20 rounded-t-lg relative" style="height: 65%">
+                        <div class="absolute bottom-0 w-full h-[65%] bg-gradient-to-t from-emerald-500 to-emerald-500/20 rounded-t-lg"></div>
+                    </div>
+                    <div class="flex-1 bg-emerald-500/20 rounded-t-lg relative" style="height: 95%">
+                        <div class="absolute bottom-0 w-full h-[95%] bg-gradient-to-t from-emerald-500 to-emerald-500/20 rounded-t-lg"></div>
+                    </div>
+                    <div class="flex-1 bg-emerald-500/20 rounded-t-lg relative" style="height: 78%">
+                        <div class="absolute bottom-0 w-full h-[78%] bg-gradient-to-t from-emerald-500 to-emerald-500/20 rounded-t-lg"></div>
+                    </div>
+                    <div class="flex-1 bg-emerald-500/20 rounded-t-lg relative" style="height: 88%">
+                        <div class="absolute bottom-0 w-full h-[88%] bg-gradient-to-t from-emerald-500 to-emerald-500/20 rounded-t-lg"></div>
+                    </div>
+                    <div class="flex-1 bg-emerald-500/20 rounded-t-lg relative" style="height: 70%">
+                        <div class="absolute bottom-0 w-full h-[70%] bg-gradient-to-t from-emerald-500 to-emerald-500/20 rounded-t-lg"></div>
+                    </div>
+                    <div class="flex-1 bg-emerald-500/20 rounded-t-lg relative" style="height: 92%">
+                        <div class="absolute bottom-0 w-full h-[92%] bg-gradient-to-t from-emerald-500 to-emerald-500/20 rounded-t-lg"></div>
+                    </div>
+                    <div class="flex-1 bg-emerald-500/20 rounded-t-lg relative" style="height: 80%">
+                        <div class="absolute bottom-0 w-full h-[80%] bg-gradient-to-t from-emerald-500 to-emerald-500/20 rounded-t-lg"></div>
+                    </div>
+                    <div class="flex-1 bg-emerald-500/20 rounded-t-lg relative" style="height: 87%">
+                        <div class="absolute bottom-0 w-full h-[87%] bg-gradient-to-t from-emerald-500 to-emerald-500/20 rounded-t-lg"></div>
+                    </div>
+                    <div class="flex-1 bg-emerald-500/20 rounded-t-lg relative" style="height: 94%">
+                        <div class="absolute bottom-0 w-full h-[94%] bg-gradient-to-t from-emerald-500 to-emerald-500/20 rounded-t-lg"></div>
+                    </div>
+                </div>
+                <div class="flex justify-between mt-4 text-white/40 text-sm">
+                    <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
+                </div>
+            </div>
+            
+            <!-- Live Trade Counter -->
+            <div class="text-center">
+                <div class="inline-flex items-center gap-3 px-6 py-3 bg-dark-800 rounded-full border border-emerald-500/30">
+                    <span class="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></span>
+                    <span class="text-white font-semibold">Live Trading Active</span>
+                    <span class="text-gold-500 font-bold" id="trade-counter">3,247</span>
+                    <span class="text-white/60 text-sm">trades this year</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="py-24 bg-dark-900/50 relative" id="technology">
+        <div class="mesh-gradient w-96 h-96 bg-emerald-500/10 top-1/2 left-0"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+                    <i class="fas fa-microchip text-emerald-500"></i>
+                    <span class="text-emerald-400 text-sm font-semibold">Advanced Technology</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                    Powered by <span class="gold-gradient">47+ Market Indicators</span>
+                </h2>
+                <p class="text-white/60 text-lg max-w-2xl mx-auto">
+                    Our proprietary AI engine continuously analyzes market structure, momentum, and reversal patterns to deliver precision signals.
+                </p>
+            </div>
+            
+            <!-- Technical Grid - Single column on mobile, 2 on md, 4 on lg -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                <div class="glass rounded-2xl p-4 md:p-6 border border-white/5 hover:border-emerald-500/30 transition-all hover-lift">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center mb-4">
+                        <i class="fas fa-wave-square text-emerald-500 text-xl"></i>
+                    </div>
+                    <h4 class="text-white font-bold mb-2">Trend Analysis</h4>
+                    <p class="text-white/60 text-sm">Multi-timeframe trend detection using 12+ moving averages and trend强度 indicators.</p>
+                </div>
+                
+                <div class="glass rounded-2xl p-6 border border-white/5 hover:border-gold-500/30 transition-all hover-lift">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center mb-4">
+                        <i class="fas fa-search-plus text-gold-500 text-xl"></i>
+                    </div>
+                    <h4 class="text-white font-bold mb-2">Pattern Recognition</h4>
+                    <p class="text-white/60 text-sm">AI-powered chart pattern detection for head & shoulders, double tops, and reversal formations.</p>
+                </div>
+                
+                <div class="glass rounded-2xl p-6 border border-white/5 hover:border-emerald-500/30 transition-all hover-lift">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center mb-4">
+                        <i class="fas fa-bolt text-emerald-500 text-xl"></i>
+                    </div>
+                    <h4 class="text-white font-bold mb-2">Momentum Filter</h4>
+                    <p class="text-white/60 text-sm">RSI, MACD, and stochastic oscillators filtered to eliminate false signals.</p>
+                </div>
+                
+                <div class="glass rounded-2xl p-6 border border-white/5 hover:border-gold-500/30 transition-all hover-lift">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center mb-4">
+                        <i class="fas fa-brain text-gold-500 text-xl"></i>
+                    </div>
+                    <h4 class="text-white font-bold mb-2">ML Optimization</h4>
+                    <p class="text-white/60 text-sm">Machine learning models that adapt to changing market conditions in real-time.</p>
+                </div>
+                
+                <div class="glass rounded-2xl p-6 border border-white/5 hover:border-emerald-500/30 transition-all hover-lift">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center mb-4">
+                        <i class="fas fa-balance-scale text-emerald-500 text-xl"></i>
+                    </div>
+                    <h4 class="text-white font-bold mb-2">Volatility Analyzer</h4>
+                    <p class="text-white/60 text-sm">ATR and Bollinger Bands for precise stop-loss placement and position sizing.</p>
+                </div>
+                
+                <div class="glass rounded-2xl p-6 border border-white/5 hover:border-gold-500/30 transition-all hover-lift">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center mb-4">
+                        <i class="fas fa-clock text-gold-500 text-xl"></i>
+                    </div>
+                    <h4 class="text-white font-bold mb-2">Time Filters</h4>
+                    <p class="text-white/60 text-sm">Optimal entry times identified using liquidity and session overlap analysis.</p>
+                </div>
+                
+                <div class="glass rounded-2xl p-6 border border-white/5 hover:border-emerald-500/30 transition-all hover-lift">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-emerald-500 text-xl"></i>
+                    </div>
+                    <h4 class="text-white font-bold mb-2">Risk Engine</h4>
+                    <p class="text-white/60 text-sm">Automated position sizing, max daily loss limits, and portfolio protection.</p>
+                </div>
+                
+                <div class="glass rounded-2xl p-6 border border-white/5 hover:border-gold-500/30 transition-all hover-lift">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center mb-4">
+                        <i class="fas fa-rocket text-gold-500 text-xl"></i>
+                    </div>
+                    <h4 class="text-white font-bold mb-2">0.02s Execution</h4>
+                    <p class="text-white/60 text-sm">Direct API connectivity to liquidity providers for instant order execution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator Section -->
+    <section class="py-16 md:py-24 bg-dark-900/50 relative" id="calculator">
+        <div class="mesh-gradient w-80 h-80 bg-gold-500/10 top-0 left-1/4"></div>
+        
+        <div class="max-w-4xl mx-auto px-3 sm:px-4 lg:px-8">
+            <div class="text-center mb-8 md:mb-12">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                    Calculate Your <span class="gold-gradient">Potential Returns</span>
+                </h2>
+                <p class="text-white/60 text-sm md:text-lg">
+                    See how much you could earn with our proven trading system
+                </p>
+            </div>
+            
+            <div class="glass rounded-2xl md:rounded-3xl p-4 md:p-8 lg:p-12 border border-white/10">
+                <!-- Mobile: stacked vertically, Desktop: 2 columns -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+                    <!-- Input Section - Stacked on mobile with proper spacing -->
+                    <div class="space-y-8 md:space-y-8 calculator-inputs">
+                        <!-- Starting Capital Slider - increased spacing -->
+                        <div class="calculator-slider-container">
+                            <label class="block text-white/70 mb-4 font-medium text-sm md:text-base">Starting Capital ($)</label>
+                            <input type="range" min="1000" max="100000" value="10000" class="calculator-range" id="capital-slider">
+                            <div class="flex justify-between mt-4">
+                                <span class="text-white/40 text-xs md:text-sm px-1">$1,000</span>
+                                <span class="text-gold-500 font-bold text-lg md:text-xl px-2 bg-dark-800/50 rounded" id="capital-value">$10,000</span>
+                                <span class="text-white/40 text-xs md:text-sm px-1">$100,000</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Monthly Trade Frequency Slider - increased spacing -->
+                        <div class="calculator-slider-container">
+                            <label class="block text-white/70 mb-4 font-medium text-sm md:text-base">Monthly Trade Frequency</label>
+                            <input type="range" min="8" max="40" value="20" class="calculator-range" id="trades-slider">
+                            <div class="flex justify-between mt-4">
+                                <span class="text-white/40 text-xs md:text-sm px-1">8 trades</span>
+                                <span class="text-gold-500 font-bold text-lg md:text-xl px-2 bg-dark-800/50 rounded" id="trades-value">20 trades</span>
+                                <span class="text-white/40 text-xs md:text-sm px-1">40 trades</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Win Rate Display -->
+                        <div>
+                            <label class="block text-white/70 mb-4 font-medium text-sm md:text-base">Average Win Rate: <span class="text-gold-500">94.7%</span></label>
+                            <div class="h-3 md:h-3 bg-dark-800 rounded-full overflow-hidden">
+                                <div class="h-full w-[94.7%] bg-gradient-to-r from-gold-500 to-emerald-500 rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Results Section - Stacked on mobile -->
+                    <div class="space-y-4 md:space-y-6">
+                        <div class="text-center p-4 md:p-6 bg-gradient-to-br from-gold-500/10 to-transparent rounded-xl md:rounded-2xl border border-gold-500/20">
+                            <p class="text-white/60 text-xs md:text-sm mb-2">Estimated Monthly Profit</p>
+                            <p class="text-3xl md:text-4xl lg:text-5xl font-bold gold-gradient" id="monthly-profit">$2,850</p>
+                            <p class="text-white/40 text-xs md:text-sm mt-2">Based on 9.5% avg monthly return</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-3 md:gap-4">
+                            <div class="text-center p-3 md:p-4 bg-dark-800/50 rounded-lg md:rounded-xl">
+                                <p class="text-white/40 text-xs md:text-sm mb-1">Yearly Projection</p>
+                                <p class="text-xl md:text-2xl font-bold text-white" id="yearly-profit">$34,200</p>
+                            </div>
+                            <div class="text-center p-3 md:p-4 bg-dark-800/50 rounded-lg md:rounded-xl">
+                                <p class="text-white/40 text-xs md:text-sm mb-1">3-Year Projection</p>
+                                <p class="text-xl md:text-2xl font-bold text-emerald-500" id="three-year-profit">$148,547</p>
+                            </div>
+                        </div>
+                        
+                        <div class="p-3 md:p-4 bg-emerald-500/10 rounded-lg md:rounded-xl border border-emerald-500/20">
+                            <p class="text-emerald-500 text-xs md:text-sm font-semibold">
+                                <i class="fas fa-info-circle mr-1 md:mr-2"></i>
+                                *Based on historical performance. Past results do not guarantee future returns.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-6 md:mt-8 text-center">
+                    <button class="w-full md:w-auto px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-gold-500 to-gold-600 text-black font-bold rounded-lg md:rounded-xl hover:shadow-lg hover:shadow-gold-500/30 transition-all hover-lift">
+                        <i class="fas fa-calculator mr-2"></i> Start Trading with These Returns
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-24 bg-dark-900/50 relative" id="pricing">
+        <div class="mesh-gradient w-80 h-80 bg-gold-500/10 top-0 right-1/4"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-500/10 border border-gold-500/20 mb-6">
+                    <i class="fas fa-tag text-gold-500"></i>
+                    <span class="text-gold-400 text-sm font-semibold">Simple Pricing</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                    Choose Your <span class="gold-gradient">Trading Plan</span>
+                </h2>
+                <p class="text-white/60 text-lg max-w-2xl mx-auto">
+                    Start with a free trial, then choose the plan that fits your trading style
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <!-- VIP Membership -->
+                <div class="glass rounded-3xl p-6 border border-white/10 hover:border-gold-500/30 transition-all hover-lift relative">
+                    <!-- Free Trial Badge -->
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white text-xs font-bold rounded-full shadow-lg shadow-emerald-500/30 whitespace-nowrap">
+                        7-Day Free Trial
+                    </div>
+                    <div class="text-center mb-4 mt-2">
+                        <h3 class="text-lg font-bold text-white mb-1">VIP Membership</h3>
+                        <p class="text-white/40 text-xs">Exclusive community access</p>
+                    </div>
+                    <div class="text-center mb-4">
+                        <span class="text-3xl font-bold gold-gradient">$30</span>
+                        <span class="text-white/40 text-sm">/month</span>
+                    </div>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-white/60 text-xs">
+                            <i class="fas fa-check text-emerald-500"></i> Private community
+                        </li>
+                        <li class="flex items-center gap-2 text-white/60 text-xs">
+                            <i class="fas fa-check text-emerald-500"></i> Weekly insights
+                        </li>
+                        <li class="flex items-center gap-2 text-white/60 text-xs">
+                            <i class="fas fa-check text-emerald-500"></i> Member discounts
+                        </li>
+                    </ul>
+                    <button class="w-full py-2 border border-gold-500/30 text-gold-500 font-semibold rounded-lg hover:bg-gold-500 hover:text-black transition-all text-sm">
+                        Join VIP
+                    </button>
+                </div>
+                
+                <!-- Daily Signals Plan -->
+                <div class="glass rounded-3xl p-6 border border-white/10 hover:border-gold-500/30 transition-all hover-lift relative">
+                    <!-- Free Trial Badge -->
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white text-xs font-bold rounded-full shadow-lg shadow-emerald-500/30 whitespace-nowrap">
+                        7-Day Free Trial
+                    </div>
+                    <div class="text-center mb-4 mt-2">
+                        <h3 class="text-lg font-bold text-white mb-1">Daily Signals</h3>
+                        <p class="text-white/40 text-xs">Up to 700 pips per week</p>
+                    </div>
+                    <div class="text-center mb-4">
+                        <span class="text-3xl font-bold gold-gradient">$50</span>
+                        <span class="text-white/40 text-sm">/month</span>
+                    </div>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-white/60 text-xs">
+                            <i class="fas fa-check text-emerald-500"></i> Daily forex & gold signals
+                        </li>
+                        <li class="flex items-center gap-2 text-white/60 text-xs">
+                            <i class="fas fa-check text-emerald-500"></i> Entry & exit levels
+                        </li>
+                        <li class="flex items-center gap-2 text-white/60 text-xs">
+                            <i class="fas fa-check text-emerald-500"></i> Stop loss & take profit
+                        </li>
+                    </ul>
+                    <button class="w-full py-2 border border-gold-500/30 text-gold-500 font-semibold rounded-lg hover:bg-gold-500 hover:text-black transition-all text-sm">
+                        Get Signals
+                    </button>
+                </div>
+                
+                <!-- Reversal Software - Featured -->
+                <div class="glass rounded-3xl p-6 border-2 border-gold-500/50 relative">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-gold-500 text-black text-xs font-bold rounded-full">
+                        BEST SELLER
+                    </div>
+                    <div class="text-center mb-4">
+                        <h3 class="text-lg font-bold text-white mb-1">Reversal Software</h3>
+                        <p class="text-white/40 text-xs">Gold On Steroids + Quantflow</p>
+                    </div>
+                    <div class="text-center mb-4">
+                        <span class="text-3xl font-bold gold-gradient">$495</span>
+                        <span class="text-white/40 text-sm">/one-time</span>
+                    </div>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-white/60 text-xs">
+                            <i class="fas fa-check text-emerald-500"></i> Advanced reversal charts
+                        </li>
+                        <li class="flex items-center gap-2 text-white/60 text-xs">
+                            <i class="fas fa-check text-emerald-500"></i> Quantflow dynamics
+                        </li>
+                        <li class="flex items-center gap-2 text-white/60 text-xs">
+                            <i class="fas fa-check text-emerald-500"></i> Risk management
+                        </li>
+                    </ul>
+                    <button class="w-full py-2 bg-gradient-to-r from-gold-500 to-gold-600 text-black font-bold rounded-lg hover:shadow-lg hover:shadow-gold-500/30 transition-all text-sm">
+                        Buy Now
+                    </button>
+                </div>
+                
+                <!-- Full Coaching Plan -->
+                <div class="glass rounded-3xl p-6 border border-white/10 hover:border-gold-500/30 transition-all hover-lift">
+                    <div class="text-center mb-4">
+                        <h3 class="text-lg font-bold text-white mb-1">Full Coaching</h3>
+                        <p class="text-white/40 text-xs">Advanced Pro + 1-on-1</p>
+                    </div>
+                    <div class="text-center mb-4">
+                        <span class="text-3xl font-bold text-white">$2,995</span>
+                        <span class="text-white/40 text-sm">/one-time</span>
+                    </div>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-white/60 text-xs">
+                            <i class="fas fa-check text-emerald-500"></i> Advanced Pro Charts
+                        </li>
+                        <li class="flex items-center gap-2 text-white/60 text-xs">
+                            <i class="fas fa-check text-emerald-500"></i> Weekly & daily analysis
+                        </li>
+                        <li class="flex items-center gap-2 text-white/60 text-xs">
+                            <i class="fas fa-check text-emerald-500"></i> 1-on-1 coaching
+                        </li>
+                    </ul>
+                    <button class="w-full py-2 border border-gold-500/30 text-gold-500 font-semibold rounded-lg hover:bg-gold-500 hover:text-black transition-all text-sm">
+                        Apply Now
+                    </button>
+                </div>
+            </div>
+            
+            <p class="text-center text-white/40 text-sm mt-8">
+                <i class="fas fa-shield-alt mr-2 text-emerald-500"></i> 30-day money-back guarantee • No hidden fees • Cancel anytime
+            </p>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                    How <span class="gold-gradient">It Works</span>
+                </h2>
+                <p class="text-white/60 text-lg max-w-2xl mx-auto">
+                    Get started in minutes. Three simple steps to profitable trading.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center group">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-gold-500/20 to-transparent border border-gold-500/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <span class="text-3xl font-bold gold-gradient">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Create Account</h3>
+                    <p class="text-white/60">
+                        Sign up in under 2 minutes. No credit card required for the 7-day trial.
+                    </p>
+                </div>
+                
+                <div class="text-center group">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-gold-500/20 to-transparent border border-gold-500/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <span class="text-3xl font-bold gold-gradient">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Connect Broker</h3>
+                    <p class="text-white/60">
+                        Link your trading account via secure API. We support 50+ brokers worldwide.
+                    </p>
+                </div>
+                
+                <div class="text-center group">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-gold-500/20 to-transparent border border-gold-500/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <span class="text-3xl font-bold gold-gradient">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Start Trading</h3>
+                    <p class="text-white/60">
+                        Receive signals and execute trades. Our system handles the rest automatically.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 bg-dark-900/50 relative" id="testimonials">
+        <div class="mesh-gradient w-96 h-96 bg-emerald-500/10 bottom-0 left-0"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                    What Our <span class="gold-gradient">Traders Say</span>
+                </h2>
+                <p class="text-white/60 text-lg">
+                    Join thousands of profitable traders worldwide
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+                <!-- Testimonial 1 -->
+                <div class="glass rounded-2xl p-4 md:p-8 border border-white/5 hover:border-gold-500/30 transition-all hover-lift">
+                    <div class="flex items-center gap-1 mb-4 star-glow">
+                        <i class="fas fa-star text-gold-500"></i>
+                        <i class="fas fa-star text-gold-500"></i>
+                        <i class="fas fa-star text-gold-500"></i>
+                        <i class="fas fa-star text-gold-500"></i>
+                        <i class="fas fa-star text-gold-500"></i>
+                    </div>
+                    <p class="text-white/80 mb-6 leading-relaxed">
+                        "After 3 years of trying different systems, The Trading Mentors finally gave me consistent profits. My account grew 340% in 8 months. The signals are incredibly accurate."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-gold-700 flex items-center justify-center text-white font-bold">
+                            MR
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold">Michael Roberts</p>
+                            <p class="text-white/40 text-sm"><i class="fas fa-map-marker-alt mr-1"></i>London, UK</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="glass rounded-2xl p-8 border border-white/5 hover:border-gold-500/30 transition-all hover-lift">
+                    <div class="flex items-center gap-1 mb-4 star-glow">
+                        <i class="fas fa-star text-gold-500"></i>
+                        <i class="fas fa-star text-gold-500"></i>
+                        <i class="fas fa-star text-gold-500"></i>
+                        <i class="fas fa-star text-gold-500"></i>
+                        <i class="fas fa-star text-gold-500"></i>
+                    </div>
+                    <p class="text-white/80 mb-6 leading-relaxed">
+                        "The automated risk management is a game-changer. I sleep better at night knowing my positions are protected. This system saved my trading career."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center text-white font-bold">
+                            SC
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold">Sarah Chen</p>
+                            <p class="text-white/40 text-sm"><i class="fas fa-map-marker-alt mr-1"></i>Singapore</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="glass rounded-2xl p-8 border border-white/5 hover:border-gold-500/30 transition-all hover-lift">
+                    <div class="flex items-center gap-1 mb-4 star-glow">
+                        <i class="fas fa-star text-gold-500"></i>
+                        <i class="fas fa-star text-gold-500"></i>
+                        <i class="fas fa-star text-gold-500"></i>
+                        <i class="fas fa-star text-gold-500"></i>
+                        <i class="fas fa-star text-gold-500"></i>
+                    </div>
+                    <p class="text-white/80 mb-6 leading-relaxed">
+                        "From $5K to $47K in 14 months. The precision signals and fast execution make all the difference. Best investment I've ever made in my trading education."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-gold-700 flex items-center justify-center text-white font-bold">
+                            AK
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold">Ahmed Khan</p>
+                            <p class="text-white/40 text-sm"><i class="fas fa-map-marker-alt mr-1"></i>Dubai, UAE</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 4 -->
+                <div class="glass rounded-2xl p-8 border border-white/5 hover:border-gold-500/30 transition-all hover-lift">
+                    <div class="flex items-center gap-1 mb-4 star-glow">
+                        <i class="fas fa-star text-gold-500"></i>
+                        <i class="fas fa-star text-gold-500"></i>
+                        <i class="fas fa-star text-gold-500"></i>
+                        <i class="fas fa-star text-gold-500"></i>
+                        <i class="fas fa-star text-gold-500"></i>
+                    </div>
+                    <p class="text-white/80 mb-6 leading-relaxed">
+                        "I've tried 12 different signal services. This is the only one that actually delivers. The win rate is real - I've tracked every signal for 6 months."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center text-white font-bold">
+                            JM
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold">James Mitchell</p>
+                            <p class="text-white/40 text-sm"><i class="fas fa-map-marker-alt mr-1"></i>Sydney, Australia</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 5 -->
+                <div class="glass rounded-2xl p-8 border border-white/5 hover:border-gold-500/30 transition-all hover-lift">
+                    <div class="flex items-center gap-1 mb-4 star-glow">
+                        <i class="fas fa-star text-gold-500"></i>
+                        <i class="fas fa-star text-gold-500"></i>
+                        <i class="fas fa-star text-gold-500"></i>
+                        <i class="fas fa-star text-gold-500"></i>
+                        <i class="fas fa-star text-gold-500"></i>
+                    </div>
+                    <p class="text-white/80 mb-6 leading-relaxed">
+                        "As a full-time trader, I need reliability. The Trading Mentors system has become my primary income source. Consistent 5-10% monthly returns for the past year."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-gold-700 flex items-center justify-center text-white font-bold">
+                            LP
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold">Lars Petersen</p>
+                            <p class="text-white/40 text-sm"><i class="fas fa-map-marker-alt mr-1"></i>Stockholm, Sweden</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 6 -->
+                <div class="glass rounded-2xl p-8 border border-white/5 hover:border-gold-500/30 transition-all hover-lift">
+                    <div class="flex items-center gap-1 mb-4 star-glow">
+                        <i class="fas fa-star text-gold-500"></i>
+                        <i class="fas fa-star text-gold-500"></i>
+                        <i class="fas fa-star text-gold-500"></i>
+                        <i class="fas fa-star text-gold-500"></i>
+                        <i class="fas fa-star text-gold-500"></i>
+                    </div>
+                    <p class="text-white/80 mb-6 leading-relaxed">
+                        "The support team is exceptional. They helped me connect my broker and optimize settings. Now I get signals on my phone and execute in seconds."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center text-white font-bold">
+                            RW
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold">Rachel Williams</p>
+                            <p class="text-white/40 text-sm"><i class="fas fa-map-marker-alt mr-1"></i>Toronto, Canada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 relative" id="faq">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                    Frequently Asked <span class="gold-gradient">Questions</span>
+                </h2>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="glass rounded-xl border border-white/5 overflow-hidden">
+                    <button class="w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="text-white font-semibold">How accurate are the trading signals?</span>
+                        <i class="fas fa-chevron-down text-gold-500 transition-transform"></i>
+                    </button>
+                    <div class="px-6 pb-6 text-white/60">
+                        Our system maintains a verified 94.7% win rate based on the last 12 months of trading. Every signal includes entry price, take profit, and stop loss levels.
+                    </div>
+                </div>
+                
+                <div class="glass rounded-xl border border-white/5 overflow-hidden">
+                    <button class="w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="text-white font-semibold">What brokers do you support?</span>
+                        <i class="fas fa-chevron-down text-gold-500 transition-transform"></i>
+                    </button>
+                    <div class="px-6 pb-6 text-white/60">
+                        We support 50+ brokers including IG, OANDA, CMC Markets, ThinkMarkets, and IC Markets. Our team can help you connect your preferred broker.
+                    </div>
+                </div>
+                
+                <div class="glass rounded-xl border border-white/5 overflow-hidden">
+                    <button class="w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="text-white font-semibold">Is there a minimum account balance required?</span>
+                        <i class="fas fa-chevron-down text-gold-500 transition-transform"></i>
+                    </button>
+                    <div class="px-6 pb-6 text-white/60">
+                        We recommend a minimum of $1,000 for optimal risk management. However, you can start with any amount using our conservative position sizing settings.
+                    </div>
+                </div>
+                
+                <div class="glass rounded-xl border border-white/5 overflow-hidden">
+                    <button class="w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="text-white font-semibold">Can I use the system manually or is it fully automated?</span>
+                        <i class="fas fa-chevron-down text-gold-500 transition-transform"></i>
+                    </button>
+                    <div class="px-6 pb-6 text-white/60">
+                        Both options are available. You can receive signals and execute manually, or use our auto-trading feature for fully automated execution.
+                    </div>
+                </div>
+                
+                <div class="glass rounded-xl border border-white/5 overflow-hidden">
+                    <button class="w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="text-white font-semibold">What is the refund policy?</span>
+                        <i class="fas fa-chevron-down text-gold-500 transition-transform"></i>
+                    </button>
+                    <div class="px-6 pb-6 text-white/60">
+                        We offer a 30-day money-back guarantee. If you're not satisfied with the results, contact support for a full refund, no questions asked.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="mesh-gradient w-full h-full bg-gold-500/5 absolute top-0"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+                Ready to <span class="gold-gradient">Transform</span> Your Trading?
+            </h2>
+            <p class="text-white/60 text-lg mb-8 max-w-2xl mx-auto">
+                Join 2,400+ elite traders generating consistent returns. Start your free 7-day trial today - no credit card required.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="px-8 py-4 bg-gradient-to-r from-gold-500 to-gold-600 text-black font-bold rounded-xl hover:shadow-lg hover:shadow-gold-500/30 transition-all hover-lift text-lg">
+                    <i class="fas fa-rocket mr-2"></i> Start Free Trial
+                </button>
+                <button class="px-8 py-4 glass text-white font-semibold rounded-xl border border-white/10 hover:border-gold-500/30 transition-all text-lg">
+                    <i class="fas fa-play mr-2 text-gold-500"></i> Watch Demo
+                </button>
+            </div>
+            <p class="text-white/40 text-sm mt-6">
+                <i class="fas fa-shield-alt mr-2 text-emerald-500"></i> 30-day money-back guarantee • 24/7 support • 50+ supported brokers
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-dark-950 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div class="md:col-span-2">
+                    <a href="#" class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold-500 to-gold-700 flex items-center justify-center">
+                            <i class="fas fa-chart-line text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white">The Trading<span class="gold-gradient">Mentors</span></span>
+                    </a>
+                    <p class="text-white/60 mb-6 max-w-md">
+                        Institutional-grade gold trading system used by 2,400+ elite traders worldwide. Trade with precision, automate your success.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/60 hover:bg-gold-500 hover:text-black transition-all">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/60 hover:bg-gold-500 hover:text-black transition-all">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/60 hover:bg-gold-500 hover:text-black transition-all">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/60 hover:bg-gold-500 hover:text-black transition-all">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Links -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-white/60 hover:text-gold-400 transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-white/60 hover:text-gold-400 transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-white/60 hover:text-gold-400 transition-colors">Blog</a></li>
+                        <li><a href="#" class="text-white/60 hover:text-gold-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-white/60 hover:text-gold-400 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white/60 hover:text-gold-400 transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="text-white/60 hover:text-gold-400 transition-colors">Risk Disclosure</a></li>
+                        <li><a href="#" class="text-white/60 hover:text-gold-400 transition-colors">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Risk Disclaimer -->
+            <div class="p-6 bg-white/5 rounded-xl border border-white/5 mb-8">
+                <h4 class="text-white font-semibold mb-3 flex items-center gap-2">
+                    <i class="fas fa-exclamation-triangle text-gold-500"></i>
+                    Important Risk Disclosure
+                </h4>
+                <p class="text-white/50 text-sm leading-relaxed">
+                    Trading financial instruments carries a high level of risk and may not be suitable for all investors. The high degree of leverage can work against you as well as for you. Before deciding to trade, you should carefully consider your investment objectives, level of experience, and risk appetite. You could lose some or all of your initial investment. Only trade with money you can afford to lose. Past performance is not indicative of future results. The trading signals provided are for educational purposes only and should not be construed as financial advice. The Trading Mentors is not a registered investment advisor. Please seek independent financial advice if necessary.
+                </p>
+            </div>
+            
+            <!-- Bottom -->
+            <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5">
+                <p class="text-white/40 text-sm">
+                    © 2026 The Trading Mentors. All rights reserved.
+                </p>
+                <div class="flex items-center gap-2 mt-4 md:mt-0">
+                    <span class="text-white/40 text-sm">Secured by</span>
+                    <i class="fas fa-lock text-emerald-500"></i>
+                    <span class="text-white/40 text-sm">256-bit SSL Encryption</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </main>
+
+    <!-- WhatsApp Widget - Fixed position with proper padding -->
+    <a href="https://wa.me/1234567890?text=Hi,%20I%20want%20a%20free%20trial%20of%20the%20Gold%20Trading%20System" 
+       target="_blank" 
+       class="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50 whatsapp-pulse group">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-2xl shadow-[#25D366]/30 hover:scale-110 transition-transform">
+            <i class="fab fa-whatsapp text-2xl sm:text-3xl text-white"></i>
+        </div>
+        <span class="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-white text-dark-900 px-4 py-2 rounded-lg font-semibold text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+            Get Free Trial
+        </span>
+    </a>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2');
+            } else {
+                navbar.classList.remove('py-2');
+            }
+        });
+
+        // Mobile menu toggle - handled by responsive-init.js
+
+        // ROI Calculator
+        const capitalSlider = document.getElementById('capital-slider');
+        const tradesSlider = document.getElementById('trades-slider');
+        const capitalValue = document.getElementById('capital-value');
+        const tradesValue = document.getElementById('trades-value');
+        const monthlyProfitEl = document.getElementById('monthly-profit');
+        const yearlyProfitEl = document.getElementById('yearly-profit');
+        const threeYearProfitEl = document.getElementById('three-year-profit');
+
+        function calculateROI() {
+            const capital = parseInt(capitalSlider.value);
+            const trades = parseInt(tradesSlider.value);
+            
+            // 9.5% average monthly return (conservative estimate)
+            const monthlyReturn = 0.095;
+            const monthlyProfit = Math.round(capital * monthlyReturn);
+            const yearlyProfit = monthlyProfit * 12;
+            
+            // Compound interest for 3 years
+            const threeYearProfit = Math.round(capital * Math.pow(1 + monthlyReturn, 36) - capital);
+            
+            capitalValue.textContent = '$' + capital.toLocaleString();
+            tradesValue.textContent = trades + ' trades';
+            monthlyProfitEl.textContent = '$' + monthlyProfit.toLocaleString();
+            yearlyProfitEl.textContent = '$' + yearlyProfit.toLocaleString();
+            threeYearProfitEl.textContent = '$' + threeYearProfit.toLocaleString();
+        }
+
+        capitalSlider.addEventListener('input', calculateROI);
+        tradesSlider.addEventListener('input', calculateROI);
+
+        // FAQ Toggle
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.classList.remove('rotate-180');
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        // Form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            const button = event.target.querySelector('button');
+            button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Processing...';
+            
+            setTimeout(() => {
+                button.innerHTML = '<i class="fas fa-check mr-2"></i> Welcome aboard!';
+                button.classList.add('bg-emerald-500', 'text-white');
+                alert('Thanks for your interest! Our team will contact you within 24 hours.');
+            }, 1500);
+        }
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Live Price Updates
+        async function updateLivePrices() {
+            try {
+                // Crypto prices from CoinGecko (free API)
+                const cryptoRes = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd&include_24hr_change=true');
+                const cryptoData = await cryptoRes.json();
+                
+                const btcPrice = cryptoData.bitcoin.usd;
+                const btcChange = cryptoData.bitcoin.usd_24h_change;
+                const ethPrice = cryptoData.ethereum.usd;
+                const ethChange = cryptoData.ethereum.usd_24h_change;
+                
+                // Update BTC
+                const btcEl = document.getElementById('btc-price');
+                const btcArrow = document.getElementById('btc-arrow');
+                if(btcEl) {
+                    btcEl.textContent = '$' + btcPrice.toLocaleString();
+                    btcArrow.textContent = btcChange >= 0 ? '▲' : '▼';
+                    btcArrow.className = btcChange >= 0 ? 'mx-2 text-emerald-500 font-semibold' : 'mx-2 text-red-500 font-semibold';
+                }
+                
+                // Update ETH
+                const ethEl = document.getElementById('eth-price');
+                const ethArrow = document.getElementById('eth-arrow');
+                if(ethEl) {
+                    ethEl.textContent = '$' + ethPrice.toLocaleString();
+                    ethArrow.textContent = ethChange >= 0 ? '▲' : '▼';
+                    ethArrow.className = ethChange >= 0 ? 'mx-2 text-emerald-500 font-semibold' : 'mx-2 text-red-500 font-semibold';
+                }
+                
+            } catch(e) {
+                console.log('Using fallback prices');
+            }
+            
+            // Simulate realistic Gold/Silver prices (fluctuate slightly)
+            const baseGold = 2342.50;
+            const baseSilver = 31.25;
+            const randomGold = (Math.random() * 10 - 5).toFixed(2);
+            const randomSilver = (Math.random() * 0.5 - 0.25).toFixed(2);
+            
+            // Update ticker prices
+            const goldPriceEls = document.querySelectorAll('.gold-live-price');
+            goldPriceEls.forEach(el => {
+                if(el) el.textContent = '$' + (baseGold + parseFloat(randomGold)).toFixed(2);
+            });
+            
+            const silverPriceEls = document.querySelectorAll('.silver-live-price');
+            silverPriceEls.forEach(el => {
+                if(el) el.textContent = '$' + (baseSilver + parseFloat(randomSilver)).toFixed(2);
+            });
+        }
+        
+        // Update prices every 30 seconds
+        updateLivePrices();
+        setInterval(updateLivePrices, 30000);
+        
+        // GSAP Animations with Mobile Safety
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Desktop-only complex animations (1024px+)
+        gsap.matchMedia({
+            "(min-width: 1024px)": function() {
+                // Hero animations - desktop only
+                gsap.from('.hero-content > *', {
+                    y: 50,
+                    opacity: 0,
+                    duration: 1,
+                    stagger: 0.2,
+                    ease: 'power3.out'
+                });
+                
+                gsap.from('.hero-right > *', {
+                    y: 50,
+                    opacity: 0,
+                    duration: 1,
+                    stagger: 0.3,
+                    delay: 0.3,
+                    ease: 'power3.out'
+                });
+                
+                // Section scroll animations - desktop only
+                gsap.utils.toArray('section').forEach(section => {
+                    gsap.from(section.children, {
+                        scrollTrigger: {
+                            trigger: section,
+                            start: 'top 80%',
+                            toggleActions: 'play none none reverse'
+                        },
+                        y: 30,
+                        opacity: 0,
+                        duration: 0.8,
+                        stagger: 0.1,
+                        ease: 'power3.out'
+                    });
+                });
+                
+                // Signal widget pulse - desktop only
+                gsap.to('.signal-glow', {
+                    boxShadow: '0 0 40px rgba(16, 185, 129, 0.6)',
+                    duration: 1.5,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: 'sine.inOut'
+                });
+                
+                // Floating elements - desktop only
+                gsap.to('.floating-element', {
+                    y: -20,
+                    duration: 2,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: 'sine.inOut'
+                });
+            },
+            "(max-width: 1023px)": function() {
+                // Mobile fallback: Simple opacity only - no layout shifts
+                gsap.from('.hero-content > *', {
+                    opacity: 0,
+                    duration: 0.5,
+                    stagger: 0.1,
+                    ease: 'power2.out'
+                });
+                
+                gsap.from('.hero-right > *', {
+                    opacity: 0,
+                    duration: 0.5,
+                    stagger: 0.15,
+                    delay: 0.2,
+                    ease: 'power2.out'
+                });
+                
+                // Minimal scroll trigger for mobile
+                gsap.utils.toArray('section').forEach(section => {
+                    gsap.from(section.children, {
+                        scrollTrigger: {
+                            trigger: section,
+                            start: 'top 85%'
+                        },
+                        opacity: 0,
+                        duration: 0.4,
+                        stagger: 0.05
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
